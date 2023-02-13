@@ -1,0 +1,76 @@
+{
+	"info": {
+		"_postman_id": "a6e9bd2c-9d65-4051-bc64-25508e8e1b93",
+		"name": "Wolt-Service API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18395504"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3333/getUsersRequests?email=maorsa198@gmail.com",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3333/getUsersRequests?email=maorsa198@gmail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"getUsersRequests"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "maorsa198@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3333/createRequestUrl",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"maorsa198@gmail.com\",\r\n    \"url\" : \"https://wolt.com/en/isr/tel-aviv/restaurant/black-burger-bar-givatayim\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3333/createRequestUrl",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"createRequestUrl"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
