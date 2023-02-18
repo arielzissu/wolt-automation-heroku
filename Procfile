@@ -1,0 +1,1 @@
+web: python app.py && cd wolt-client && npm start
