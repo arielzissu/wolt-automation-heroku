@@ -52,7 +52,7 @@ class makeRequests:
                         print(mail)
                         self._threads.append(Thread(target=self._email.send_message, args=(mail, url)))
                         self._db_threaded.delete_row_by_url(url)
-                    self.start_threads()    
+                    self.start_threads()
                 else:
                     self._db_threaded.update_last_checked_by_url(url)
             except KeyError as e:
