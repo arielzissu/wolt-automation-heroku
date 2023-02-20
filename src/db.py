@@ -1,7 +1,6 @@
 import sqlite3
 from datetime import datetime
 
-
 class ScrapingUrlsDB:
     def __init__(self):
         # self.con = sqlite3.connect('../database/wolt.db')

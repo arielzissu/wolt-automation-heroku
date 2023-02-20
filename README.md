@@ -3,6 +3,11 @@
 pip3 install -r requirements.txt
 ```
 
+# Run client:
+```
+cd wolt-client && npm start
+```
+
 # Run server:
 ```
 python3 app.py
