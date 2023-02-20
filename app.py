@@ -5,8 +5,17 @@ from flask_limiter.util import get_remote_address
 from src.consts import HEADERS
 from modules.helpers import *
 import json
+import os
+from dotenv import load_dotenv
+load_dotenv()
 
 app = Flask(__name__, static_url_path='/', static_folder='./wolt-client/build')
+config_type = os.environ.get('FLASK_ENV', 'development')
+if config_type == 'development':
+    app.config.from_object('config.DevelopmentConfig')
+elif config_type == 'production':
+    app.config.from_object('config.ProductionConfig')
+
 limiter = Limiter(app, key_func=get_remote_address)
 CORS(app)
 start_scanning()
@@ -82,4 +91,4 @@ def error():
 
 if __name__ == '__main__':
     # start_scanning()
-    app.run(debug=True, host="0.0.0.0", port=3333)
+    app.run()

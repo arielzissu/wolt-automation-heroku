@@ -8,6 +8,11 @@ pip3 install -r requirements.txt
 cd wolt-client && npm start
 ```
 
+# Create ".env" file:
+```
+FLASK_ENV=development
+```
+
 # Run server:
 ```
 python3 app.py
